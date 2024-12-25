@@ -9,6 +9,8 @@ import org.springframework.boot.context.properties.ConstructorBinding;
  *
  * setter를 추가하지 말고 동작하도록 해보세요.
  */
+@ConfigurationProperties(prefix = "security.jwt.token")
+@ConstructorBinding
 public class SecurityJwtTokenProperties {
     private String secretKey;
     private String expireLength;
